@@ -1,0 +1,15 @@
+prefix = "."
+dataset = "ProductList"
+corpus = "file.toml"
+index = "indx"
+
+[[analyzers]]
+method = "ngram-word"
+ngram = 1
+filter = [{type = "icu-tokenizer", suppress-tags = true}, {type = "lowercase"}]
+
+[ranker]
+method = "bm25"
+k1 = 1.2
+b = 0.75
+k3 = 500

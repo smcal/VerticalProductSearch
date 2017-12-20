@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Product Vertical Search Engine</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	</head>
+	<body>
+		<form>
+			Product Search: <input type="text" name="query"> <input type="Submit" value="Search">
+		</form>
+    {% if user_input %}
+      <h1>Ranked product listing for: {{user_input}}</h1>
+      <h4>To use the query witout removing stopwords surround it with "quotes"</h4>
+		    <table border = "1">
+			   <tr>
+				  <th>Title</th><th>Price</th><th>Site</th>
+			   </tr>
+			  {% for item in ranked_list %}
+				<tr>
+					<td><a target="_blank" href={{item[3]}}>{{item[0]}}</td>
+					<td>{{item[1]}}</td>
+					<td>{{item[2]}}
+				</tr>
+			 {% endfor %}
+		</table>
+    {% else %} <!-- tell user to search for data or that there is no data -->
+      <h1>Search for product</h1>
+      <h4>To use the query witout removing stopwords surround it with "quotes"</h4>
+    {% endif %}
+	</body>
+</html>
