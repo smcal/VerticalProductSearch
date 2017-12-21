@@ -79,6 +79,6 @@ This starts the flask web server so just launch a browser and enter:
 
 There are two way to perform a search.  One is to enter the query directly and the code will remove the stopwords and perform stemming on the rest.  This is good for some searches but may not be good for searches where the stopwords are part of the product name you are interested in (for example "Go Cubes" which is chewable coffee).  So if you surround the query in quotes the code will not process the query to remove the stopwords.  The results are still processed statistically to provide ranked list of results.
 
-If you want to use this as an API in your own apps I have a mini test driver (tester.py) that prints out the data to the console and shows you how to make the api call.
+If you want to use this as an API in your own apps I have a mini test driver (tester.py) that prints out the data to the console and shows you how to make the api call.  The data strcture returned is an ordered list of tuples.
 >python3 tester.py
 
