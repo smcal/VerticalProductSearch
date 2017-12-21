@@ -32,7 +32,7 @@ The best environment for this project is a *nix platform.  There is no simpler s
 The first thing you will need is API credentials in order to access Amazon, Ebay and Walmart.  Of the three Amazon is the most convoluted.  You need to create an Amazon associates account as if you are setting up a storefront but once you do you go to Tools -> Product Advertising API to create your access keys (as of Dec 2017)
 
 Amazon  - [Amazon Associates Account](https://affiliate-program.amazon.com/assoc_credentials/home)  
-ebay       - [ebay developers program](https://go.developer.ebay.com/)  
+ebay       - [ebay developers program](https://go.developer.ebay.com/) Use the production key; not the sandbox one.  
 Walmart - [Walmart Open API](https://developer.walmartlabs.com/)  
 
 >Enter the values in sample-api-config.cfg and rename it to api-config.cfg
